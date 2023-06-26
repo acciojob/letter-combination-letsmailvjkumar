@@ -1,6 +1,6 @@
 function letterCombinations(input_digit) {
-  //Complete the function
-	const digitMap = {
+  const digitMap = {
+    '2': 'abc',
     '3': 'def',
     '4': 'ghi',
     '5': 'jkl',
@@ -27,11 +27,12 @@ function letterCombinations(input_digit) {
     }
   }
 
-  if (nextDigits) {
-    backtrack('', nextDigits);
+  if (input_digit) {
+    backtrack('', input_digit);
   }
 
   return combinations;
 }
+
 
 module.exports = letterCombinations;
